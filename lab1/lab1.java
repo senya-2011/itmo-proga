@@ -26,8 +26,11 @@ public class lab1{
 	public static double func2(double x){
 		double result;
 		double degree; //создадим переменную для подсчета отдельно степени
-
-		result = Math.pow(x, (double)1/3);
+		if (x<0){
+			result = -Math.pow(-x, (double)1/3); //проверка на знак тк разные Область определения разная у корня и степени
+		}else{
+			result = Math.pow(x, (double)1/3);
+		}
 		result = Math.cos(result);
 		degree = Math.pow(2 - x, 2) / 2;
 		degree = Math.pow(degree, 3) / 2;
@@ -44,6 +47,11 @@ public class lab1{
 		result = Math.pow(x, 0.5) + 1;
 		result = Math.sin(x) * result;
 		result = Math.pow(result, 2);
+		if (result < 0){
+			result = -Math.pow(-result, (double)1/3); //проверка на знак тк разные Области опр у корня и степени
+		}else{
+			result = Math.pow(result, (double)1/3);
+		}
 		result = Math.pow(result, (double)1/3);
 		result = result * 0.75;
 		result = Math.pow(result, 3);
