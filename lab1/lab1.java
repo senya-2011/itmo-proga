@@ -1,4 +1,4 @@
-public class lab1{
+public class Lab1{
 
 
 	/*
@@ -90,18 +90,30 @@ public class lab1{
 		for(int i=0; i<firstSizeFinalArray; i++){
 			for(int j=0; j<secondSizeFinalArray; j++){	
 
-
-				if(c[i]==5){
+				switch(c[i]){
+				case 5:
 					u[i][j] = func1(x[j]);
-				}
-
-				else if(c[i]==8 || c[i]==9 || c[i]==10 || c[i]==11 || c[i]==12 || c[i]==14 || c[i]==15 || c[i]==19){
+					break;
+				case 8, 9, 10, 11, 12, 14, 15, 19:
 					u[i][j] = func2(x[j]);
+					break;
+				default:
+					u[i][j] = func3(x[j]);
+					break;
 				}
 
-				else{
-					u[i][j] = func3(x[j]);
-				}
+				//тот же код только с ифами
+				// if(c[i]==5){
+				// 	u[i][j] = func1(x[j]);
+				// }
+
+				// else if(c[i]==8 || c[i]==9 || c[i]==10 || c[i]==11 || c[i]==12 || c[i]==14 || c[i]==15 || c[i]==19){
+				// 	u[i][j] = func2(x[j]);
+				// }
+
+				// else{
+				// 	u[i][j] = func3(x[j]);
+				// }
 
 
 				System.out.printf("%.2f", u[i][j]);//вывод с двумя знаками после запятой
