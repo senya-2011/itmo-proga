@@ -3,7 +3,7 @@ package mymoves.SerperiorMoves;
 import ru.ifmo.se.pokemon.*;
 import ru.ifmo.se.pokemon.Battle;
 
-public class Place extends Camouflage {
+public class Place{
     public Type Place(double randNum){
         Type place = Type.NORMAL;
         if (randNum<0.2){

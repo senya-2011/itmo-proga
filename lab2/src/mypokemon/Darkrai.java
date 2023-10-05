@@ -6,7 +6,7 @@ import mymoves.DarkraiMove.ConfuseRay;
 import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 
-public class Darkrai extends ConfuseRay {
+public class Darkrai extends Pokemon {
     final double hp = 70;
     final double attack = 90;
     final double defense = 90;

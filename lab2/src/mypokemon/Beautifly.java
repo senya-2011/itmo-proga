@@ -5,7 +5,7 @@ import mymoves.BeautiflyMoves.LightScreen;
 import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 
-public class Beautifly extends LightScreen {
+public class Beautifly extends Pokemon {
 
     final double hp = 60;
     final double attack = 70;

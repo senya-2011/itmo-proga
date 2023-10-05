@@ -1,6 +1,5 @@
 package mypokemon;
 
-import mymoves.CansoonMove.ThunderWave;
 import mymoves.SerperiorMoves.Camouflage;
 import mymoves.SerperiorMoves.Growl;
 import mymoves.SerperiorMoves.SweetScent;
@@ -8,7 +7,7 @@ import mymoves.SerperiorMoves.WaterSpout;
 import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 
-public class Serperior extends SweetScent {
+public class Serperior extends Pokemon {
     final double hp = 75;
     final double attack = 75;
     final double defense = 95;

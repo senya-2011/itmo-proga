@@ -8,7 +8,7 @@ import mymoves.SerperiorMoves.Camouflage;
 import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 
-public class Electabuzz extends ThunderShock {
+public class Electabuzz extends Pokemon {
     final double hp = 65;
     final double attack = 83;
     final double defense = 57;

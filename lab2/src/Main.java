@@ -3,7 +3,7 @@ import mypokemon.*;
 import ru.ifmo.se.pokemon.Battle;
 import ru.ifmo.se.pokemon.Type;
 
-public class Main extends Serperior {
+public class Main {
     public static void main(String[] args) {
         Battle b = new Battle();
 

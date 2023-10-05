@@ -7,7 +7,7 @@ import mymoves.DarkraiMove.ConfuseRay;
 import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 
-public class Cascoon extends ConfuseRay {
+public class Cascoon extends Pokemon {
     final double hp = 50;
     final double attack = 35;
     final double defense = 55;

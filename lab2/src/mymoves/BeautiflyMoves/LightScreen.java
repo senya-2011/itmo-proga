@@ -13,7 +13,6 @@ public class LightScreen extends StatusMove {
     @Override
     protected void applyOppEffects(Pokemon p){
         Effect e = new Effect();
-        e.turns(5);
         p.setMod(Stat.ATTACK, -(int)(p.getStat(Stat.ATTACK)/2));
     }
 }

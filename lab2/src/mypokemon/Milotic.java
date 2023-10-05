@@ -7,7 +7,7 @@ import mymoves.MiloticMove.SlackOff;
 import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 
-public class Milotic extends SlackOff {
+public class Milotic extends Pokemon {
     final double hp = 95;
     final double attack = 60;
     final double defense = 79;
