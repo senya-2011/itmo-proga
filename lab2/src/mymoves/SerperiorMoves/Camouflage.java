@@ -6,14 +6,14 @@ public class Camouflage extends StatusMove {
     Place RandomPlace = new Place();
     public Camouflage(){
         super(Type.NORMAL, 100, 100);
-        super.type = RandomPlace.Place(randNum);
+        super.type = RandomPlace.Place();
     }
 
 
     @Override
     protected String describe(){
 
-        return "прожимает Camouflage "+RandomPlace.messageInChat(randNum);
+        return "прожимает Camouflage. "+ RandomPlace.message+"\nтип покемона поменялся из-за погоды";
     }
 
 }

@@ -17,6 +17,5 @@ public class WaterSpout extends SpecialMove{
         double maxHP = p.getStat(Stat.HP);
         double power = 150*p.getHP()/maxHP;
         super.power = power;
-        System.out.println(super.power);
     }
 }

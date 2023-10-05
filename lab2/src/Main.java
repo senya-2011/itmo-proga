@@ -17,9 +17,9 @@ public class Main {
         Darkrai p4 = new Darkrai("Робот", 1);
         Electabuzz p5 = new Electabuzz("Електрик", 1);
         Serperior p6 = new Serperior("Русслака", 1);
-        b.addFoe(p4);
-        b.addFoe(p5);
         b.addFoe(p6);
+        b.addFoe(p5);
+        b.addFoe(p4);
 
         b.go();
     }
