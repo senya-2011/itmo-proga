@@ -4,8 +4,8 @@ import ru.ifmo.se.pokemon.*;
 import ru.ifmo.se.pokemon.Battle;
 
 class Place{
-    String message;
-    protected Type Place(){
+    static String message;
+    static Type randPlace(){
         double randNum = Math.random();
         String messageInChat = new String();
 
