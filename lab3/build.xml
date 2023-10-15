@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<project name="lab2" default="package">
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+	<javac destdir="build/classes" includeantruntime="false">
+                <src path="src/"/>
+        </javac>
+	</target>
+
+	<target name="package" depends="compile">
+		<jar destfile="lab3.jar" basedir="build/classes">
+        		<manifest>
+            			<attribute name="Main-Class" value="Main"/>
+        		</manifest>
+		</jar>
+	</target>
+</project>
