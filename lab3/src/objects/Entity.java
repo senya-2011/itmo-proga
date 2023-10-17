@@ -6,16 +6,41 @@ import Enums.Gender;
 import interfaces.Coordinate;
 import interfaces.Property;
 
+import java.util.Locale;
 import java.util.Objects;
 
 public class Entity extends Obj implements Property, Coordinate {
 
-    String ending=" ";
-    final String name;
+    //проверка игнорирующая регистр
+    @Override
+    public boolean equals(Object o) {
+        Entity entity = (Entity) o;
+        return Objects.equals(ending, entity.ending) && Objects.equals(name.toLowerCase(), entity.name.toLowerCase());
+    }
+
+    //сравнение по полу
+    @Override
+    public int hashCode() {
+        return Objects.hash(ending);
+    }
+
+    //вывод имени и пола объекта
+    @Override
+    public String toString() {
+        return "Entity{" +
+                "name='" + name + '\'' +
+                ", sex=" + sex +
+                '}';
+    }
+
+    private String ending=" ";
+    final private String name;
+    final private Gender sex;
 
     public Entity(String name, Gender sex){
         super(name);
         this.name = name;
+        this.sex = sex;
         if (sex == Gender.Female){
             this.ending = "а ";
         }else if (sex == Gender.Neuther){
@@ -23,24 +48,6 @@ public class Entity extends Obj implements Property, Coordinate {
         }else if (sex == Gender.All){
             this.ending = "и ";
         }
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Entity entity = (Entity) o;
-        return Objects.equals(ending, entity.ending) && Objects.equals(name, entity.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(ending, name);
-    }
-
-    @Override
-    public String toString() {
-        return "Entity{}";
     }
 
     public void doSomething(Action act){

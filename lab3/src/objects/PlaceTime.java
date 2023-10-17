@@ -3,10 +3,6 @@ package objects;
 import Enums.Time;
 
 public class PlaceTime {
-    @Override
-    public String toString() {
-        return "PlaceTime{}";
-    }
 
     public static void setTime(Time time){
         if (time == Time.Night){

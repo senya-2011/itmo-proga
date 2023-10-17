@@ -9,7 +9,6 @@ import objects.Thing;
 
 public class Main {
 
-
     public static void main(String[] args){
         //объекты, которые могут действовать
         Entity karl = new Entity("Малыш", Gender.Male);
@@ -17,6 +16,9 @@ public class Main {
         Entity sight = new Entity("взгляд", Gender.Male);
         Entity ghost = new Entity("Привидение", Gender.Neuther);
         Entity sounds = new Entity("звуки", Gender.All);
+
+
+
 
         //объекты не умеющие действовать
         Thing window = new Thing("окно");
@@ -65,6 +67,14 @@ public class Main {
         System.out.print(".");
 
         System.out.println("\n\n=================================================================================");
+
+
+        //проверка на одного и того же человека с помощью пола + имя(не важен регистр)
+        Entity e1 = new Entity("name1", Gender.Male);
+        Entity e2 = new Entity("Name1", Gender.Male);
+
+        System.out.println(e1.equals(e2));
+        System.out.println(e1);
     }
 
 }
