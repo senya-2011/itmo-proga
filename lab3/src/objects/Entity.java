@@ -33,7 +33,7 @@ public class Entity extends Obj implements Property, Coordinate {
                 '}';
     }
 
-    private String ending=" ";
+    private String ending;
     final private String name;
     final private Gender sex;
 
@@ -41,13 +41,7 @@ public class Entity extends Obj implements Property, Coordinate {
         super(name);
         this.name = name;
         this.sex = sex;
-        if (sex == Gender.Female){
-            this.ending = "а ";
-        }else if (sex == Gender.Neuther){
-            this.ending = "о ";
-        }else if (sex == Gender.All){
-            this.ending = "и ";
-        }
+        this.ending = sex.getName();
     }
 
     public void doSomething(Action act){
