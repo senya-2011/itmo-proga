@@ -1,0 +1,5 @@
+package Enums;
+
+public enum Action {
+    SNORT, SPLASH, NOTENOUGH, SOUND, THINK, RUN, OPEN, WANT, MEET, THOUGHT, CAN, SLEEP, STAY, CONFUSE
+}
