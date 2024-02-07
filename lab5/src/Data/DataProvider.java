@@ -15,7 +15,7 @@ public class DataProvider {
             ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(fileName));
             outputStream.writeObject(vector);
         } catch (Exception e) {
-            System.out.println("Нет доступа к файлу");
+            System.out.println("РќРµС‚ РґРѕСЃС‚СѓРїР° Рє С„Р°Р№Р»Сѓ");
         }
 
     }
@@ -24,10 +24,10 @@ public class DataProvider {
         try{
             ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(fileName));
             Vector<SpaceMarine> loadVector = (Vector<SpaceMarine>) inputStream.readObject();
-            System.out.println("Успешно загружено!");
+            System.out.println("РЈСЃРїРµС€РЅРѕ Р·Р°РіСЂСѓР¶РµРЅРѕ!");
             return loadVector;
         } catch (Exception e) {
-            System.out.println("Файл не найден!");
+            System.out.println("Р¤Р°Р№Р» РЅРµ РЅР°Р№РґРµРЅ!");
             return new Vector<SpaceMarine>();
         }
     }
@@ -37,10 +37,10 @@ public class DataProvider {
         try{
             Scanner sc = new Scanner(new File(fileName));
             while (sc.hasNextLine()) {
-                String line = sc.nextLine().trim();//убираем пробелы
+                String line = sc.nextLine().trim();//СѓР±РёСЂР°РµРј РїСЂРѕР±РµР»С‹
                 lines.add(line);}
         }catch (FileNotFoundException e){
-            System.out.println("К файлу нету доступа или он отсутствует!");
+            System.out.println("Рљ С„Р°Р№Р»Сѓ РЅРµС‚Сѓ РґРѕСЃС‚СѓРїР° РёР»Рё РѕРЅ РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚!");
         }
         return lines;
     }

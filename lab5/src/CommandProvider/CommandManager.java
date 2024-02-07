@@ -33,7 +33,7 @@ public class CommandManager {
     public void CommandChecker(String userString){
 
         String[] commandToWords = userString.split(" ");
-        String command = commandToWords[0]; // получаем первое слово, что и является коммандой
+        String command = commandToWords[0]; // РїРѕР»СѓС‡Р°РµРј РїРµСЂРІРѕРµ СЃР»РѕРІРѕ, С‡С‚Рѕ Рё СЏРІР»СЏРµС‚СЃСЏ РєРѕРјРјР°РЅРґРѕР№
 
 
         if (command.equals("help") && commandToWords.length==1){
@@ -44,7 +44,7 @@ public class CommandManager {
             InfoCommand(collection);
             addCommand(command);
         }else
-        if (command.equals("add") && commandToWords.length==1){ //не совсем понятно, что за элемент надо добавлять по этому мы создаем его
+        if (command.equals("add") && commandToWords.length==1){ //РЅРµ СЃРѕРІСЃРµРј РїРѕРЅСЏС‚РЅРѕ, С‡С‚Рѕ Р·Р° СЌР»РµРјРµРЅС‚ РЅР°РґРѕ РґРѕР±Р°РІР»СЏС‚СЊ РїРѕ СЌС‚РѕРјСѓ РјС‹ СЃРѕР·РґР°РµРј РµРіРѕ
             AddCommand(collection);
             addCommand(command);
         }else
@@ -74,7 +74,7 @@ public class CommandManager {
         }else
         if (command.equals("save") && commandToWords.length==1){
             dp.Save(collection, SaveCommand(collection));
-            System.out.println("Сохранено");
+            System.out.println("РЎРѕС…СЂР°РЅРµРЅРѕ");
             addCommand(command);
         }else
         if (command.equals("load") && commandToWords.length==1){
@@ -102,22 +102,22 @@ public class CommandManager {
             addCommand(command);
         }else
         if(command.equals("cls") && commandToWords.length==1){
-            System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"); //очистка консоли
+            System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"); //РѕС‡РёСЃС‚РєР° РєРѕРЅСЃРѕР»Рё
         }else
         if(userString.replaceAll(" ", "")==""){
-            System.out.print("");//не выдаем ошибку на пустую строку
+            System.out.print("");//РЅРµ РІС‹РґР°РµРј РѕС€РёР±РєСѓ РЅР° РїСѓСЃС‚СѓСЋ СЃС‚СЂРѕРєСѓ
         }else
         if(command.equals("execute_script") && commandToWords.length==2){
             ExecuteScriptCommand(commandToWords[1], dp);
             addCommand(command);
         }else{
-            System.out.println("Такой команды нет. Введите help для списка команд");
+            System.out.println("РўР°РєРѕР№ РєРѕРјР°РЅРґС‹ РЅРµС‚. Р’РІРµРґРёС‚Рµ help РґР»СЏ СЃРїРёСЃРєР° РєРѕРјР°РЅРґ");
         }
 
     }
     private void addCommand(String command) {
         if (commandList.size() == 6) {
-            commandList.removeFirst(); // удаление первого элемента, если достигнут максимальный размер
+            commandList.removeFirst(); // СѓРґР°Р»РµРЅРёРµ РїРµСЂРІРѕРіРѕ СЌР»РµРјРµРЅС‚Р°, РµСЃР»Рё РґРѕСЃС‚РёРіРЅСѓС‚ РјР°РєСЃРёРјР°Р»СЊРЅС‹Р№ СЂР°Р·РјРµСЂ
         }
         commandList.addLast(command);
     }

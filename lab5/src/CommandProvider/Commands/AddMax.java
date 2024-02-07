@@ -7,7 +7,7 @@ import java.util.Vector;
 public class AddMax {
     public static void AddMaxCommand(Vector<SpaceMarine> collection){
         SpaceMarine sp = new SpaceMarine();
-        System.out.println("Созданный персонаж");
+        System.out.println("РЎРѕР·РґР°РЅРЅС‹Р№ РїРµСЂСЃРѕРЅР°Р¶");
         System.out.println(sp);
         int maxId=0;
 
@@ -16,13 +16,13 @@ public class AddMax {
                 maxId = s.getId();
             }
         }
-        System.out.println("Максимальное значение: "+ String.valueOf(maxId));
-        System.out.println("Значение созданого: "+ String.valueOf(sp.getId()));
+        System.out.println("РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: "+ String.valueOf(maxId));
+        System.out.println("Р—РЅР°С‡РµРЅРёРµ СЃРѕР·РґР°РЅРѕРіРѕ: "+ String.valueOf(sp.getId()));
         if(sp.getId()>maxId){
-            System.out.println("Добавляем!");
+            System.out.println("Р”РѕР±Р°РІР»СЏРµРј!");
             collection.add(sp);
         }else{
-            System.out.println("Не добавляем!");
+            System.out.println("РќРµ РґРѕР±Р°РІР»СЏРµРј!");
         }
     }
 }

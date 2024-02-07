@@ -12,14 +12,14 @@ public class CountLess {
         try{
             int chapterValue = Integer.parseInt(chapterString);
             for(SpaceMarine sp: collection){
-                int value = sp.getChapter().getMarinesCount(); //получаем значение каждого
+                int value = sp.getChapter().getMarinesCount(); //РїРѕР»СѓС‡Р°РµРј Р·РЅР°С‡РµРЅРёРµ РєР°Р¶РґРѕРіРѕ
                 if(value<chapterValue){
                     count++;
                 }
             }
         }catch(NumberFormatException e){
-            System.out.println("Надо ввести значение chapter int!");
+            System.out.println("РќР°РґРѕ РІРІРµСЃС‚Рё Р·РЅР°С‡РµРЅРёРµ chapter int!");
         }
-        System.out.println("Кол-во элементов, значение поля chapter которых меньше заданного: "+count);
+        System.out.println("РљРѕР»-РІРѕ СЌР»РµРјРµРЅС‚РѕРІ, Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ chapter РєРѕС‚РѕСЂС‹С… РјРµРЅСЊС€Рµ Р·Р°РґР°РЅРЅРѕРіРѕ: "+count);
     }
 }

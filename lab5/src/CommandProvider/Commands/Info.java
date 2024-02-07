@@ -6,22 +6,22 @@ import java.time.LocalDateTime;
 import java.util.Vector;
 
 public class Info {
-    private java.time.LocalDateTime Date;
+    private LocalDateTime Date;
 
     public static void InfoCommand(Vector<SpaceMarine> collection){
-        System.out.println("Размер коллекции: "+ String.valueOf(collection.size()));
+        System.out.println("Р Р°Р·РјРµСЂ РєРѕР»Р»РµРєС†РёРё: "+ String.valueOf(collection.size()));
         if(collection.size()>0) {
-            java.time.LocalDateTime maxDate = collection.get(0).getDate();
+            LocalDateTime maxDate = collection.get(0).getDate();
 
             for (SpaceMarine sp : collection) {
                 if (maxDate.isBefore(sp.getDate())) {
                     maxDate = sp.getDate();
                 }
             }
-            System.out.println("Дата последнего изменения коллекции: "+maxDate);
+            System.out.println("Р”Р°С‚Р° РїРѕСЃР»РµРґРЅРµРіРѕ РёР·РјРµРЅРµРЅРёСЏ РєРѕР»Р»РµРєС†РёРё: "+maxDate);
         }
 
-        System.out.println("Кол-во элементов: "+collection.size());
+        System.out.println("РљРѕР»-РІРѕ СЌР»РµРјРµРЅС‚РѕРІ: "+collection.size());
 
     }
 }

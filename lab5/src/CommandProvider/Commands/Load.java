@@ -9,7 +9,7 @@ import static SpaceMarines.JustScanner.Scan;
 
 public class Load {
     public static Vector<SpaceMarine> LoadCommand(DataProvider dp){
-        System.out.print("Введите имя файла, который хотите загрузить: ");
+        System.out.print("Р’РІРµРґРёС‚Рµ РёРјСЏ С„Р°Р№Р»Р°, РєРѕС‚РѕСЂС‹Р№ С…РѕС‚РёС‚Рµ Р·Р°РіСЂСѓР·РёС‚СЊ: ");
         return dp.Load(Scan());
     }
 }

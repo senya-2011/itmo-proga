@@ -6,25 +6,25 @@ import static SpaceMarines.JustScanner.Scan;
 
 public class Coordinates implements Serializable {
     private int x;
-    private Long y; //Поле не может быть null
+    private Long y; //РџРѕР»Рµ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ null
     public Coordinates(){
         while(true){
             try{
-                System.out.print("Введите (int)х: ");
+                System.out.print("Р’РІРµРґРёС‚Рµ (int)С…: ");
                 x = Integer.parseInt(Scan());
                 break;
             }catch(NumberFormatException e){
-                System.out.println("Надо ввести значение int!");
+                System.out.println("РќР°РґРѕ РІРІРµСЃС‚Рё Р·РЅР°С‡РµРЅРёРµ int!");
             }
         }
 
         while(true){
             try{
-                System.out.print("Введите (Long)y: ");
+                System.out.print("Р’РІРµРґРёС‚Рµ (Long)y: ");
                 y = Long.parseLong(Scan());
                 break;
             }catch(NumberFormatException e){
-                System.out.println("Надо ввести значение Long!");
+                System.out.println("РќР°РґРѕ РІРІРµСЃС‚Рё Р·РЅР°С‡РµРЅРёРµ Long!");
             }
         }
 

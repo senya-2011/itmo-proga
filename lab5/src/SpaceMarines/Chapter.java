@@ -5,22 +5,22 @@ import java.io.Serializable;
 import static SpaceMarines.JustScanner.Scan;
 
 public class Chapter implements Serializable {
-    private String name; //Поле не может быть null, Строка не может быть пустой
+    private String name; //РџРѕР»Рµ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ null, РЎС‚СЂРѕРєР° РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РїСѓСЃС‚РѕР№
     private String parentLegion;
-    private Integer marinesCount; //Поле может быть null, Значение поля должно быть больше 0, Максимальное значение поля: 1000
+    private Integer marinesCount; //РџРѕР»Рµ РјРѕР¶РµС‚ Р±С‹С‚СЊ null, Р—РЅР°С‡РµРЅРёРµ РїРѕР»СЏ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ 0, РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ: 1000
 
     public void makeChapter(){
         while(true){
-            System.out.print("Введите имя Chapter: ");
+            System.out.print("Р’РІРµРґРёС‚Рµ РёРјСЏ Chapter: ");
             String name = Scan();
             if (name.replaceAll(" ", "")==""){
-                System.out.println("Вы ввели пустую строку!");
+                System.out.println("Р’С‹ РІРІРµР»Рё РїСѓСЃС‚СѓСЋ СЃС‚СЂРѕРєСѓ!");
             }else{
                 setName(name);
                 break;
             }
         }
-        System.out.print("Введите parentLegion: ");
+        System.out.print("Р’РІРµРґРёС‚Рµ parentLegion: ");
         String pl = Scan();
         if (pl.replaceAll(" ", "")==""){
             this.parentLegion =null;
@@ -29,7 +29,7 @@ public class Chapter implements Serializable {
         }
 
         while(true){
-            System.out.print("Введите 0<marinesCount<=1000: ");
+            System.out.print("Р’РІРµРґРёС‚Рµ 0<marinesCount<=1000: ");
             String mc = Scan();
             if (mc.replaceAll(" ", "")==""){
                 this.marinesCount =null;
@@ -39,10 +39,10 @@ public class Chapter implements Serializable {
                         setMarinesCount(Integer.parseInt(mc));
                         break;
                     }else{
-                        System.out.println("Число должно быть больше 0, но меньше 1000!");
+                        System.out.println("Р§РёСЃР»Рѕ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ 0, РЅРѕ РјРµРЅСЊС€Рµ 1000!");
                     }
                 }catch(NumberFormatException e){
-                    System.out.println("Надо ввести int или пустую строку!");
+                    System.out.println("РќР°РґРѕ РІРІРµСЃС‚Рё int РёР»Рё РїСѓСЃС‚СѓСЋ СЃС‚СЂРѕРєСѓ!");
                 }
             }
         }

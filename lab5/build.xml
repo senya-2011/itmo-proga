@@ -2,16 +2,16 @@
 <project name="lab5" default="package">
     <target name="compile">
         <mkdir dir="build/classes"/>
-	<javac destdir="build/classes" includeantruntime="false">
-                <src path="src/"/>
+        <javac destdir="build/classes" includeantruntime="false">
+            <src path="src/"/>
         </javac>
-	</target>
+    </target>
 
-	<target name="package" depends="compile">
-		<jar destfile="lab5.jar" basedir="build/classes">
-        		<manifest>
-            			<attribute name="Main-Class" value="Main"/>
-        		</manifest>
-		</jar>
-	</target>
+    <target name="package" depends="compile">
+        <jar destfile="lab5.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="ConsoleApp"/>
+            </manifest>
+        </jar>
+    </target>
 </project>

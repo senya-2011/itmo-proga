@@ -32,11 +32,11 @@ public class CountWeapon {
                     count++;}
 
             }
-            System.out.println("Кол-во элементов, значение поля weaponType которых больше заданного: "+count);
+            System.out.println("РљРѕР»-РІРѕ СЌР»РµРјРµРЅС‚РѕРІ, Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ weaponType РєРѕС‚РѕСЂС‹С… Р±РѕР»СЊС€Рµ Р·Р°РґР°РЅРЅРѕРіРѕ: "+count);
 
 
         }catch (NumberFormatException e){
-            System.out.println("Значение должно быть weaponType int!");
+            System.out.println("Р—РЅР°С‡РµРЅРёРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ weaponType int!");
         }
     }
 }

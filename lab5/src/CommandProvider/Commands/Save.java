@@ -8,7 +8,7 @@ import static SpaceMarines.JustScanner.Scan;
 
 public class Save {
     public static String SaveCommand(Vector<SpaceMarine> collection){
-        System.out.println("Напише файл в который надо сохранить: ");
+        System.out.println("РќР°РїРёС€Рµ С„Р°Р№Р» РІ РєРѕС‚РѕСЂС‹Р№ РЅР°РґРѕ СЃРѕС…СЂР°РЅРёС‚СЊ: ");
         String fileName = Scan();
         fileName.replaceAll(" ", "");
         fileName.replaceAll(".", "");

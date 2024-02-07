@@ -7,7 +7,7 @@ import java.util.Vector;
 public class Remove {
     public static void RemoveCommand(Vector<SpaceMarine> collection, String[] commandToWords){
         if (commandToWords.length != 2) {
-            System.out.println("Ошибка ввода команды!");
+            System.out.println("РћС€РёР±РєР° РІРІРѕРґР° РєРѕРјР°РЅРґС‹!");
         } else {
             try {
                 boolean isId = true;
@@ -16,14 +16,14 @@ public class Remove {
                     if (cmdId==o.getId()){
                         collection.remove(o);
                         isId = false;
-                        System.out.println("Успешно удален SpaceMarine с id: "+ cmdId);
+                        System.out.println("РЈСЃРїРµС€РЅРѕ СѓРґР°Р»РµРЅ SpaceMarine СЃ id: "+ cmdId);
                     }
                 }
                 if(isId){
-                    System.out.println("SpaceMarine с таким id нету!");
+                    System.out.println("SpaceMarine СЃ С‚Р°РєРёРј id РЅРµС‚Сѓ!");
                 }
             } catch (NumberFormatException e) {
-                System.out.println("Ошибка id - int!");
+                System.out.println("РћС€РёР±РєР° id - int!");
             }
         }
     }

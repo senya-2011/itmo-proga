@@ -14,12 +14,12 @@ public class Sort {
         for(SpaceMarine sp: collection){
             idVector.add(sp.getId());
         }
-        Collections.sort(idVector); //получаем сортированный вектор по значениям
+        Collections.sort(idVector); //РїРѕР»СѓС‡Р°РµРј СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ РІРµРєС‚РѕСЂ РїРѕ Р·РЅР°С‡РµРЅРёСЏРј
 
         for(Integer id: idVector){
            for(SpaceMarine sp: collection){
                if(sp.getId()==id){
-                   sortedCollection.add(sp); //записываем наши объекты так же как и в сорт. векторе
+                   sortedCollection.add(sp); //Р·Р°РїРёСЃС‹РІР°РµРј РЅР°С€Рё РѕР±СЉРµРєС‚С‹ С‚Р°Рє Р¶Рµ РєР°Рє Рё РІ СЃРѕСЂС‚. РІРµРєС‚РѕСЂРµ
                }
            }
         }

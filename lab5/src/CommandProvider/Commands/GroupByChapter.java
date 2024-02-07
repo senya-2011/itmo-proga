@@ -11,28 +11,28 @@ public class GroupByChapter {
     public static void GroupByChapterCommand(Vector<SpaceMarine> collection){
 
         int nullCount=0;
-        Map<Integer, Integer> groupsMap = new HashMap<>();//key - уникальное значение, 2-ой Integer - кол-во повторений
-        //за значение Chapter возьмем marinesCount
+        Map<Integer, Integer> groupsMap = new HashMap<>();//key - СѓРЅРёРєР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ, 2-РѕР№ Integer - РєРѕР»-РІРѕ РїРѕРІС‚РѕСЂРµРЅРёР№
+        //Р·Р° Р·РЅР°С‡РµРЅРёРµ Chapter РІРѕР·СЊРјРµРј marinesCount
 
         for(SpaceMarine sp: collection){
             try{
-                int value = sp.getChapter().getMarinesCount(); //получаем значение каждого
+                int value = sp.getChapter().getMarinesCount(); //РїРѕР»СѓС‡Р°РµРј Р·РЅР°С‡РµРЅРёРµ РєР°Р¶РґРѕРіРѕ
                 UpdateGroupsMap(groupsMap, value);
             }catch (NullPointerException e){
                 nullCount++;            }
         }
 
-        for(Map.Entry<Integer, Integer> e:groupsMap.entrySet() ){ //разбиваем на пары "ключ+значение" и проходимся по каждой
-            System.out.println("Количество Chapter со значением "+ e.getKey()+" = "+e.getValue());
+        for(Map.Entry<Integer, Integer> e:groupsMap.entrySet() ){ //СЂР°Р·Р±РёРІР°РµРј РЅР° РїР°СЂС‹ "РєР»СЋС‡+Р·РЅР°С‡РµРЅРёРµ" Рё РїСЂРѕС…РѕРґРёРјСЃСЏ РїРѕ РєР°Р¶РґРѕР№
+            System.out.println("РљРѕР»РёС‡РµСЃС‚РІРѕ Chapter СЃРѕ Р·РЅР°С‡РµРЅРёРµРј "+ e.getKey()+" = "+e.getValue());
         }
-        System.out.println("Количество Chapter со значением null = "+nullCount);
+        System.out.println("РљРѕР»РёС‡РµСЃС‚РІРѕ Chapter СЃРѕ Р·РЅР°С‡РµРЅРёРµРј null = "+nullCount);
     }
 
     private static void UpdateGroupsMap(Map<Integer, Integer> groupMap, int value){
-        if(groupMap.containsKey(value)){ //если группа с таким номером уже сущесствует
-            groupMap.put(value, groupMap.get(value)+1);//добавляем к кол-ву повторений 1
+        if(groupMap.containsKey(value)){ //РµСЃР»Рё РіСЂСѓРїРїР° СЃ С‚Р°РєРёРј РЅРѕРјРµСЂРѕРј СѓР¶Рµ СЃСѓС‰РµСЃСЃС‚РІСѓРµС‚
+            groupMap.put(value, groupMap.get(value)+1);//РґРѕР±Р°РІР»СЏРµРј Рє РєРѕР»-РІСѓ РїРѕРІС‚РѕСЂРµРЅРёР№ 1
         }else{
-            groupMap.put(value, 1);//если нету создаем новую группу с 1
+            groupMap.put(value, 1);//РµСЃР»Рё РЅРµС‚Сѓ СЃРѕР·РґР°РµРј РЅРѕРІСѓСЋ РіСЂСѓРїРїСѓ СЃ 1
         }
     }
 }

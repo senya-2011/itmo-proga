@@ -8,7 +8,7 @@ public class Update {
     public static void UpdateCommand(Vector<SpaceMarine> collection, String[] commandToWords) {
 
         if (commandToWords[1]!="id") {
-            System.out.println("Ошибка ввода команды!");
+            System.out.println("РћС€РёР±РєР° РІРІРѕРґР° РєРѕРјР°РЅРґС‹!");
         } else {
             try {
                 boolean isId = true;
@@ -16,18 +16,18 @@ public class Update {
                 for(SpaceMarine o: collection){
                     if (cmdId==o.getId()){
                         o.setId();
-                        System.out.println("Значение обновленно! Новое значение: "+ String.valueOf(o.getId()));
+                        System.out.println("Р—РЅР°С‡РµРЅРёРµ РѕР±РЅРѕРІР»РµРЅРЅРѕ! РќРѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ: "+ String.valueOf(o.getId()));
                         isId = false;
                     }
                 }
                 if(isId){
-                    System.out.println("SpaceMarine с таким id нету!");
+                    System.out.println("SpaceMarine СЃ С‚Р°РєРёРј id РЅРµС‚Сѓ!");
                 }
 
 
 
             } catch (NumberFormatException e) {
-                System.out.println("Ошибка id - int!");
+                System.out.println("РћС€РёР±РєР° id - int!");
             }
         }
     }

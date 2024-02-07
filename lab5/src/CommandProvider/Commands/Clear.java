@@ -5,6 +5,6 @@ import java.util.Vector;
 public class Clear {
     public static void ClearCommand(Vector collection){
         collection.clear();
-        System.out.println("Коллекция очищена.");
+        System.out.println("РљРѕР»Р»РµРєС†РёСЏ РѕС‡РёС‰РµРЅР°.");
     }
 }
