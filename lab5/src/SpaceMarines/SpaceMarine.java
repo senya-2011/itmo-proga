@@ -5,6 +5,10 @@ import java.time.LocalDateTime;
 
 import static SpaceMarines.JustScanner.Scan;
 
+/**
+ * This is the collection class that we collect in this program.
+ * */
+
 public class SpaceMarine implements Serializable { //разбор на байты и сбор обратно
     private int id; //Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private String name; //Поле не может быть null, Строка не может быть пустой
@@ -29,8 +33,9 @@ public class SpaceMarine implements Serializable { //разбор на байт�
         System.out.println("SpaceMarine "+ name+" создан");
     }
 
+
     private void setChapter(){
-        int chapterChoice=0;
+        int chapterChoice;
         while(true) {
             try {
                 System.out.print("Если хотите добавить Chapter, введите 1 иначе 2: ");
@@ -136,7 +141,7 @@ public class SpaceMarine implements Serializable { //разбор на байт�
             System.out.print("Введите значение больше 0 (Long)health: ");
             try{
                 String sHealth = Scan();
-                if (sHealth.replaceAll(" ", "")==""){
+                if (sHealth.replaceAll(" ", "").equals("")){
                     health = null;
                     break;
                 }
@@ -159,7 +164,7 @@ public class SpaceMarine implements Serializable { //разбор на байт�
         while (true){
             System.out.print("Введите имя: ");
             name = Scan();
-            if(name.replaceAll(" ", "")==""){
+            if(name.replaceAll(" ", "").equals("")){
                 System.out.println("Вы ввели пустую строчку! Имя не может быть пустой строчкой.");
             }else{break;}
         }
@@ -174,7 +179,7 @@ public class SpaceMarine implements Serializable { //разбор на байт�
 
     @Override
     public String toString(){
-        return ("Name: "+name+ "\nid: "+ String.valueOf(id) + "\nКоординаты: "+ coordinates+"\nДата: "+ creationDate+"\nhealth: "+ health+", heartCount: "+heartCount +
+        return ("Name: "+name+ "\nid: "+ id + "\nКоординаты: "+ coordinates+"\nДата: "+ creationDate+"\nhealth: "+ health+", heartCount: "+heartCount +
                 "\nweaponType: "+ weaponType + "\nmeleeWeapon: "+meleeWeapon+"\nChapter: "+ chapter);
     }
 }

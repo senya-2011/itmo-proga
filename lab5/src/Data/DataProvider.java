@@ -6,9 +6,18 @@ import java.io.*;
 import java.util.Scanner;
 import java.util.Vector;
 
+
+/**
+ * Data Class responsible for saving and unloading files
+ * */
 public class DataProvider {
 
-
+    /**
+     * Saving a collection to a file
+     *
+     * @param vector collection where we store SpaceMarine objects
+     * @param fileName file name where to save
+     * */
     public void Save(Vector<SpaceMarine> vector, String fileName){
 
         try{
@@ -19,6 +28,13 @@ public class DataProvider {
         }
 
     }
+
+    /**
+     * Load a collection from file
+     *
+     * @param fileName the name of the file from which the collection should be loaded
+     * @return collection where we store SpaceMarine objects
+     * */
     public Vector<SpaceMarine> Load(String fileName){
         System.out.println(fileName);
         try{
@@ -27,11 +43,17 @@ public class DataProvider {
             System.out.println("Успешно загружено!");
             return loadVector;
         } catch (Exception e) {
-            System.out.println("Файл не найден!");
+            System.out.println("Файл не найден или в файле не Vector<SpaceMarine>!");
             return new Vector<SpaceMarine>();
         }
     }
 
+    /**
+     * Load a script from file
+     *
+     * @param fileName the name of the file from which the script should be loaded
+     * @return collection where we store script
+     * */
     public Vector<String> LoadScript(String fileName){
         Vector<String> lines = new Vector<String>();
         try{
@@ -45,10 +67,4 @@ public class DataProvider {
         return lines;
     }
 
-
-
-
-        public static void UpdateCollection(Vector collection){
-        System.out.println();
-    }
 }

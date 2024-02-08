@@ -5,6 +5,15 @@ import SpaceMarines.SpaceMarine;
 import java.util.Vector;
 
 public class Update {
+    /**
+     * update value of element
+     * <p>
+     * update the value of a collection element whose id is equal to a given one
+     *
+     * @param collection collection where we store SpaceMarine objects
+     * @param commandToWords the string entered by the user, divided into words
+     * */
+
     public static void UpdateCommand(Vector<SpaceMarine> collection, String[] commandToWords) {
 
         if (commandToWords[1]!="id") {

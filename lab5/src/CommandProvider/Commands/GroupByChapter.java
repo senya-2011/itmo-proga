@@ -8,6 +8,15 @@ import java.util.Map;
 import java.util.Vector;
 
 public class GroupByChapter {
+
+
+    /**
+     * group elements by value of chapter
+     * <p>
+     * group the collection elements by the value of the chapter field, display the number of elements in each group
+     *
+     * @param collection collection where we store SpaceMarine objects
+     * */
     public static void GroupByChapterCommand(Vector<SpaceMarine> collection){
 
         int nullCount=0;

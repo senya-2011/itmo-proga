@@ -5,6 +5,14 @@ import SpaceMarines.SpaceMarine;
 import java.util.Vector;
 
 public class AddMax {
+
+    /**
+     * add if element value is max
+     * <p>
+     * add a new element to a collection if its value is greater than the value of the largest element of this collection
+     *
+     * @param collection collection where we store SpaceMarine objects
+     * */
     public static void AddMaxCommand(Vector<SpaceMarine> collection){
         SpaceMarine sp = new SpaceMarine();
         System.out.println("Созданный персонаж");

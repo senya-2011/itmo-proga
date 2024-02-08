@@ -7,7 +7,13 @@ import java.util.Vector;
 
 public class Info {
     private LocalDateTime Date;
-
+    /**
+     * display information
+     * <p>
+     * display information about the collection to standard output
+     *
+     * @param collection collection where we store SpaceMarine objects
+     * */
     public static void InfoCommand(Vector<SpaceMarine> collection){
         System.out.println("Размер коллекции: "+ String.valueOf(collection.size()));
         if(collection.size()>0) {

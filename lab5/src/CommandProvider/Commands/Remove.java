@@ -5,6 +5,12 @@ import SpaceMarines.SpaceMarine;
 import java.util.Vector;
 
 public class Remove {
+    /**
+     * remove an element from a collection by its id
+     *
+     * @param collection collection where we store SpaceMarine objects
+     * @param commandToWords the string entered by the user, divided into words
+     * */
     public static void RemoveCommand(Vector<SpaceMarine> collection, String[] commandToWords){
         if (commandToWords.length != 2) {
             System.out.println("Ошибка ввода команды!");

@@ -7,6 +7,10 @@ public class JustScanner {
         Scanner scanner = new Scanner(System.in);
         return scanner.nextLine();
     }
+    /**
+     *
+     *
+     * **/
 
 
 }

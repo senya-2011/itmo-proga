@@ -3,6 +3,10 @@ package CommandProvider.Commands;
 import java.sql.SQLOutput;
 
 public class Help{
+
+    /**
+     * display help on available commands
+     * */
     public static void HelpCommand(){
         System.out.println("\n====================\n");
 
@@ -22,6 +26,7 @@ public class Help{
         System.out.println("group_counting_by_chapter - сгруппировать элементы коллекции по значению поля chapter, вывести количество элементов в каждой группе");
         System.out.println("count_less_than_chapter chapter - вывести количество элементов, значение поля chapter которых меньше заданного");
         System.out.println("count_greater_than_weapon_type weaponType - вывести количество элементов, значение поля weaponType которых больше заданного");
+        System.out.println("load - загрузить файл");
         System.out.println("cls - очистка консоли");
 
         System.out.println("\n====================\n");

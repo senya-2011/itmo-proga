@@ -6,6 +6,14 @@ import java.util.Collections;
 import java.util.Vector;
 
 public class Sort {
+
+    /**
+     * sorted collection
+     *
+     * @param collection collection where we store SpaceMarine objects
+     * @return sorted collection where we store SpaceMarine objects
+     * */
+
     public static Vector<SpaceMarine> SortCommand(Vector<SpaceMarine> collection){
 
         Vector<Integer> idVector = new Vector<>();

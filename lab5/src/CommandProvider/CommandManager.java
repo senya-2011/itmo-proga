@@ -24,12 +24,24 @@ import static CommandProvider.Commands.Sort.SortCommand;
 import static CommandProvider.Commands.Update.UpdateCommand;
 import static SpaceMarines.JustScanner.Scan;
 
+/**
+ * Class responsible for commands
+ * <p>
+ * This is the brain of the program, which gives commands to other methods so that they perform certain actions.
+ * */
 
 public class CommandManager {
     private DataProvider dp = new DataProvider();
     private Vector<SpaceMarine> collection = new Vector<SpaceMarine>();
     LinkedList commandList = new LinkedList();
 
+    /**
+     *Check for Command
+     * <p>
+     * We check the user's line for the presence of a command, and if available, pass it to the commands
+     *
+     * @param userString this is the string that the user entered
+     * */
     public void CommandChecker(String userString){
 
         String[] commandToWords = userString.split(" ");
@@ -115,6 +127,12 @@ public class CommandManager {
         }
 
     }
+
+    /**
+     * This is a command counter that is needed to clear the list of them
+     *
+     * @param command - last command entered by the user
+     * */
     private void addCommand(String command) {
         if (commandList.size() == 6) {
             commandList.removeFirst(); // удаление первого элемента, если достигнут максимальный размер

@@ -5,6 +5,16 @@ import SpaceMarines.SpaceMarine;
 import java.util.Vector;
 
 public class CountLess {
+
+    /**
+     * display quantity less than specified
+     * <p>
+     * display the number of elements whose chapter field value is less than a given one
+     *
+     * @param collection collection where we store SpaceMarine objects
+     * @param chapterString command argument meaning chapter value
+     * */
+
     public static void CountLessCommand(Vector<SpaceMarine> collection, String chapterString){
 
         int count=0;

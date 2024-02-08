@@ -6,6 +6,15 @@ import SpaceMarines.Weapon;
 import java.util.Vector;
 
 public class CountWeapon {
+
+    /**
+     * display the number of elements greater than specified
+     * <p>
+     * display the number of elements whose weaponType field value is greater than the specified one
+     *
+     * @param collection collection where we store SpaceMarine objects
+     * @param userString command argument meaning weapon value
+     * */
     public static void CountWeaponCommand(Vector<SpaceMarine> collection, String userString){
         try{
             int userValue = Integer.parseInt(userString);
