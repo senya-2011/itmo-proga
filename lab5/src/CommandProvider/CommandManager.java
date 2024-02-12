@@ -34,6 +34,7 @@ public class CommandManager {
     private DataProvider dp = new DataProvider();
     private Vector<SpaceMarine> collection = new Vector<SpaceMarine>();
     LinkedList commandList = new LinkedList();
+    CompareSpaceMarine CSM = new CompareSpaceMarine();
 
     /**
      *Check for Command
@@ -57,7 +58,7 @@ public class CommandManager {
             addCommand(command);
         }else
         if (command.equals("add") && commandToWords.length==1){ //не совсем понятно, что за элемент надо добавлять по этому мы создаем его
-            AddCommand(collection);
+            AddCommand(collection, CSM);
             addCommand(command);
         }else
         if (command.equals("show") && commandToWords.length==1){
@@ -110,7 +111,7 @@ public class CommandManager {
             addCommand(command);
         }else
         if(command.equals("add_if_max") && commandToWords.length==1){
-            AddMaxCommand(collection);
+            AddMaxCommand(collection, CSM);
             addCommand(command);
         }else
         if(command.equals("cls") && commandToWords.length==1){

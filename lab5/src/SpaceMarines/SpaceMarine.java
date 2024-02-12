@@ -9,7 +9,7 @@ import static SpaceMarines.JustScanner.Scan;
  * This is the collection class that we collect in this program.
  * */
 
-public class SpaceMarine implements Serializable { //разбор на байты и сбор обратно
+public class SpaceMarine implements Serializable{ //разбор на байты и сбор обратно
     private int id; //Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private String name; //Поле не может быть null, Строка не может быть пустой
     private Coordinates coordinates = new Coordinates(); //Поле не может быть null
@@ -176,6 +176,8 @@ public class SpaceMarine implements Serializable { //разбор на байт�
     public Chapter getChapter(){return chapter; }
     public Weapon getWeaponType(){return weaponType;}
     public LocalDateTime getDate(){return creationDate;}
+
+    public String getName(){return name;}
 
     @Override
     public String toString(){
