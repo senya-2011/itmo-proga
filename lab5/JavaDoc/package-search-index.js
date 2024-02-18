@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"CommandProvider"},{"l":"CommandProvider.Commands"},{"l":"Data"},{"l":"SpaceMarines"}];updateSearchResults();
