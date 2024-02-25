@@ -47,7 +47,7 @@ public class Server {
             logger.info("Bind Address {}", host);
             datagramChannel.bind(host);
         }catch (Exception e){
-            logger.error("Port {} is already in use", port);
+            logger.error("Address is already in use");
             throw e;
         }
 
