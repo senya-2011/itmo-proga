@@ -3,10 +3,12 @@ package main.Managers;
 import main.Data.DataProvider;
 import main.SpaceMarines.SpaceMarine;
 
+import java.util.Collections;
 import java.util.Vector;
 
 public class CollectionManager {
 
+    ComparatorCollection comparator = new ComparatorCollection();
     DataProvider dp = new DataProvider();
     Vector<SpaceMarine> collection = dp.Load("data.csv");
     String arg;
@@ -18,9 +20,11 @@ public class CollectionManager {
 
     public void addCollection(){
         collection.add(sp);
+        Collections.sort(collection, comparator);
         sp = null;
     }
     public Vector<SpaceMarine> getCollection(){
+        Collections.sort(collection, comparator);
         return collection;
     }
     public void saveCollection(){
