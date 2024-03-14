@@ -24,7 +24,6 @@ public class CollectionManager {
         sp = null;
     }
     public Vector<SpaceMarine> getCollection(){
-        Collections.sort(collection, comparator);
         return collection;
     }
     public void saveCollection(){

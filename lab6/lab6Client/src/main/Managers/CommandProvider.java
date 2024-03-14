@@ -1,5 +1,6 @@
 package main.Managers;
 
+import jdk.swing.interop.SwingInterOpUtils;
 import main.ResponseAndRequest.Request;
 import main.ResponseAndRequest.Response;
 import main.Scripts.ScriptManager;
@@ -92,7 +93,6 @@ public class CommandProvider {
             System.out.print("");//не выдаем ошибку на пустую строку
         }else if(command.equals("execute_script") && commandToWords.length==2){
             Vector<String> lines = sm.Script(commandToWords[1]);
-
             if(lines!=null){
                 scriptLines = lines;
                 return new byte[1];

@@ -14,6 +14,7 @@ import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.DatagramChannel;
+import java.util.Arrays;
 import java.util.Scanner;
 
 import static Response.sendResponse.send;
@@ -23,7 +24,7 @@ public class Server {
 
     private static final Logger logger = LoggerFactory.getLogger(Server.class);
 
-    public static void main(String[] args) throws IOException, ClassNotFoundException {
+    public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
         logger.info("The Server started");
         //main.Managers
         CollectionManager collectionManager = new CollectionManager();
@@ -74,10 +75,28 @@ public class Server {
                 //прием запроса
                 Request request = (Request) requestManager.doRequest(buffer.array());
                 buffer.clear();
+                System.out.println("получили запрос");
 
                 //Ответ клиенту
                 String response = invoker.doCommand(request);
-                send(toByteManager.toByte(new Response(response)), datagramChannel, clientAddress);
+                byte[] responseBytes = toByteManager.toByte(new Response(response));
+
+//                send(ByteBuffer.allocate(Integer.BYTES).putInt(responseBytes.length).array(), datagramChannel, clientAddress);
+//                Thread.sleep(400);
+//                send(toByteManager.toByte(new Response(response)), datagramChannel, clientAddress);
+                while(true){
+                    if(responseBytes.length>100){
+                        System.out.println("отправляем 100 байтов");
+                        send(Arrays.copyOfRange(responseBytes, 0, 100), datagramChannel, clientAddress);
+                        responseBytes = Arrays.copyOfRange(responseBytes, 100, responseBytes.length);
+                    }else{
+                        System.out.println("отправляем последние байты");
+                        send(responseBytes, datagramChannel, clientAddress);
+                        send(new byte[]{2, 2, 8}, datagramChannel, clientAddress);
+                        break;
+                    }
+                }
+
                 logger.info("Sent a response to the client {}", clientAddress);
                 buffer = ByteBuffer.allocate(1024 * 1024);
 

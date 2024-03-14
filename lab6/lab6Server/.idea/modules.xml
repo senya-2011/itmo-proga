@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/RequestModule/RequestModule.iml" filepath="$PROJECT_DIR$/RequestModule/RequestModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commandIntModule/commandIntModule.iml" filepath="$PROJECT_DIR$/commandIntModule/commandIntModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/connectModule/connectModule.iml" filepath="$PROJECT_DIR$/connectModule/connectModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab6Server.iml" filepath="$PROJECT_DIR$/lab6Server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/responseModule/responseModule.iml" filepath="$PROJECT_DIR$/responseModule/responseModule.iml" />
+    </modules>
+  </component>
+</project>

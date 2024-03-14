@@ -4,6 +4,8 @@ package main.Commands;
 import interfaces.Command;
 import main.Managers.CollectionManager;
 
+import java.util.function.Consumer;
+
 public class AddMaxCommand implements Command {
 
     private CollectionManager cm;

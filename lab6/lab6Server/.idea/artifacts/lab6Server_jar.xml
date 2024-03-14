@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="lab6Server:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/lab6Server_jar</output-path>
+    <root id="archive" name="lab6Server.jar">
+      <element id="module-output" name="lab6Server" />
+      <element id="module-output" name="serverModul" />
+      <element id="module-output" name="commandIntModule" />
+      <element id="module-output" name="connectModule" />
+      <element id="module-output" name="responseModule" />
+      <element id="module-output" name="RequestModule" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-api/2.22.0/log4j-api-2.22.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-core/2.22.0/log4j-core-2.22.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-slf4j-impl/2.22.0/log4j-slf4j-impl-2.22.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/ch/qos/logback/logback-core/1.5.0/logback-core-1.5.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.5.0/logback-classic-1.5.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/2.0.4/slf4j-api-2.0.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/ch/qos/reload4j/reload4j/1.2.22/reload4j-1.2.22.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
