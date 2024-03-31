@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="lab6Client:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/lab6Client_jar</output-path>
-    <root id="archive" name="lab6Client.jar">
-      <element id="module-output" name="lab6Client" />
-    </root>
-  </artifact>
-</component>
