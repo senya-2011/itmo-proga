@@ -1,0 +1,5 @@
+info
+show
+history
+cake
+execute_script script1.txt
