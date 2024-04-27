@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<project name="lab6Client" default="package">
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac destdir="build/classes" includeantruntime="false">
+            <src path="src/main"/>
+        </javac>
+    </target>
+
+    <target name="package" depends="compile">
+        <jar destfile="client.jar" basedir="build/classes">
+            <fileset dir="src" />
+            <fileset dir="src/main/resources/imgs" />
+            <manifest>
+                <attribute name="Main-Class" value="main/Client"/>
+            </manifest>
+        </jar>
+    </target>
+</project>
