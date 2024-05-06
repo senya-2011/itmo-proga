@@ -7,7 +7,7 @@ import java.util.Scanner;
 import java.util.Vector;
 
 public class ScriptManager {
-
+    public static File file;
     public Vector<String> Script(String filename){
         HashMap<String, Integer> filenames= new HashMap<>();
         Vector<String> output = new Vector<>();
@@ -46,10 +46,13 @@ public class ScriptManager {
     private Vector<String> LoadScript(String fileName){
         Vector<String> lines = new Vector<String>();
         try{
-            Scanner sc = new Scanner(new File(fileName));
+            Scanner sc = new Scanner(file);
             while (sc.hasNextLine()) {
                 String line = sc.nextLine().trim();//убираем пробелы
-                lines.add(line);}
+                if(!line.equals("")){
+                    lines.add(line);
+                }
+                }
         }catch (FileNotFoundException e){
             System.out.println("К файлу нету доступа или он отсутствует!");
         }

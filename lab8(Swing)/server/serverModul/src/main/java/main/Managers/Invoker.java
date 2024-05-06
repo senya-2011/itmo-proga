@@ -47,7 +47,9 @@ public class Invoker {
         if (commandList.size() == 6) {
             commandList.removeFirst(); // удаление первого элемента, если достигнут максимальный размер
         }
-        commandList.addLast(command);
+        if(!command.equals("return")){
+            commandList.addLast(command);
+        }
     }
     private void checkArg(Request request){
         collectionManager.setLogin(request.getLogin());

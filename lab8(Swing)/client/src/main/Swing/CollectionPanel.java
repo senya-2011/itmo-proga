@@ -4,14 +4,17 @@ package main.Swing;
 import main.Swing.Buttons.MyActionListerner;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.text.NumberFormatter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.text.NumberFormat;
 
 import static main.Client.messages;
+import static main.Scripts.ScriptManager.file;
 import static main.Swing.Main.frame;
 
 import static main.Client.sendRequest;
@@ -29,6 +32,7 @@ public class CollectionPanel {
     private static JButton groupButton;
     private static JButton historyButton;
     private static JButton countWeapon;
+    private static JButton scriptButton;
     private static JFormattedTextField countLessField;
     private static JComboBox countWeaponBox;
     private static Font font = new Font("Consolas", Font.PLAIN, 13);
@@ -45,7 +49,6 @@ public class CollectionPanel {
         makePanel();
     }
     public void makePanel(){
-
         panel.removeAll();
         panel.setLayout(null);
         panel.setBackground(Color.orange);
@@ -69,6 +72,8 @@ public class CollectionPanel {
         historyButton.setBounds(10, 500, 80, 30);
         countWeapon = madeButton(countWeapon, "Count greater weapon");
         countWeapon.setBounds(100, 500, 170, 20);
+        scriptButton = madeButton(scriptButton, "execute script");
+        scriptButton.setBounds(280, 500, 180, 30);
 
         panel.add(addButton);
         panel.add(sortButton);
@@ -79,6 +84,7 @@ public class CollectionPanel {
         panel.add(groupButton);
         panel.add(historyButton);
         panel.add(countWeapon);
+        panel.add(scriptButton);
 
         //fields && comboBoxes
         NumberFormat format = NumberFormat.getInstance();
@@ -141,6 +147,32 @@ public class CollectionPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 sendRequest("count_less_than_chapter "+countLessField.getText().replaceAll(",", ""));
+            }
+        });
+
+        scriptButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFileChooser jFileChooser = new JFileChooser();
+                jFileChooser.setFileFilter(new FileFilter() {
+                    @Override
+                    public boolean accept(File f) {
+                        if(f.getName().endsWith(".txt")){
+                            return true;
+                        }
+                        return false;
+                    }
+                    @Override
+                    public String getDescription() {
+                        return null;
+                    }
+                });
+                jFileChooser.showDialog(panel, "execute");
+                File file1 = jFileChooser.getSelectedFile();
+                if(file1!= null){
+                    file = file1;
+                    sendRequest("execute_script");
+                }
             }
         });
 

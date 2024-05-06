@@ -100,8 +100,8 @@ public class CommandProvider {
             return tbm.outRequest(request);
         }else if(userString.replaceAll(" ", "")==""){
             System.out.print("");//не выдаем ошибку на пустую строку
-        }else if(command.equals("execute_script") && commandToWords.length==2){
-            Vector<String> lines = sm.Script(commandToWords[1]);
+        }else if(command.equals("execute_script")){
+            Vector<String> lines = sm.Script("test");
             if(lines!=null){
                 scriptLines = lines;
                 return new byte[1];

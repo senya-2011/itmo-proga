@@ -109,8 +109,8 @@ public class Client {
                                     Response response = (Response) objStream.readObject();
                                     data = response.getData();
                                     myData = response.getMyData();
-                                    model.setDataVector(getNewData(), columnNames);
                                     myModel.setDataVector(myData, columnNames);
+                                    model.setDataVector(data, columnNames);
                                     if(!(response.getRespose().equals("228328"))){
                                         mainLabel.setText(response.getRespose());
                                     }
