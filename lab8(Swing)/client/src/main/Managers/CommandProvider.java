@@ -38,9 +38,13 @@ public class CommandProvider {
         } else if (command.equals("return")) {
             request.setName(command);
             return tbm.outRequest(request);
-        }else if (command.equals("add") && commandToWords.length==1){
+        }else if (command.equals("add")){
             request.setName(command);
-            request.setSp(spaceMarine);
+            if(commandToWords.length==11){
+                request.setSp(new SpaceMarine(commandToWords[1], commandToWords[2], commandToWords[3], commandToWords[4],commandToWords[5],commandToWords[6], commandToWords[7],commandToWords[8],commandToWords[9],commandToWords[10]));
+            }else{
+                request.setSp(spaceMarine);
+            }
             return tbm.outRequest(request);
         }else if (command.equals("info") && commandToWords.length==1){
             request.setName(command);
